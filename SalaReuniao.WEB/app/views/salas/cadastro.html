@@ -1,0 +1,90 @@
+﻿<h4>Cadastro de Sala</h4>
+<hr/>
+
+<div class="row">
+    <div class="col-md-4">
+
+        <label>Nome da Sala</label>
+        <input type="text" class="form-control"
+               placeholder="Nome da Sala"
+               ng-model="sala.Nome" />
+
+        <label>Ramal da Sala</label>
+        <input type="text" class="form-control"
+               placeholder="Ramal da Sala"
+               ng-model="sala.Ramal" />
+
+        <label>PossuiVideoConfer</label>
+        <input type="text" class="form-control"
+               placeholder="PossuiVideoConfer"
+               ng-model="sala.PossuiVideoConfer" />
+
+        <label>PossuiProjetor</label>
+        <input type="text" class="form-control"
+               placeholder="PossuiProjetor"
+               ng-model="sala.PossuiProjetor" />
+
+        <label>PossuiQuadro</label>
+        <input type="text" class="form-control"
+               placeholder="PossuiQuadro"
+               ng-model="sala.PossuiQuadro" />
+
+        <label>QtdCadeiras</label>
+        <input type="text" class="form-control"
+               placeholder="QtdCadeiras"
+               ng-model="sala.QtdCadeiras" />
+
+        <label>Endereco</label>
+        <input type="text" class="form-control"
+               placeholder="Endereco"
+               ng-model="sala.Endereco" />
+
+        <label>Predio</label>
+        <input type="text" class="form-control"
+               placeholder="Predio"
+               ng-model="sala.Predio" />
+
+        <label>Andar</label>
+        <input type="text" class="form-control"
+               placeholder="Andar"
+               ng-model="sala.Andar" />
+
+        <label>IdEmpresa</label>
+        <input type="text" class="form-control"
+               placeholder="IdEmpresa"
+               ng-model="sala.IdEmpresa" />
+
+        <label>IdEstado</label>
+        <input type="text" class="form-control"
+               placeholder="IdEstado"
+               ng-model="sala.IdEstado" />
+
+        <label>IdCidade</label>
+        <input type="text" class="form-control"
+               placeholder="IdCidade"
+               ng-model="sala.IdCidade" />
+
+        <label>IdUsuarioResponsavel</label>
+        <input type="text" class="form-control"
+               placeholder="IdUsuarioResponsavel"
+               ng-model="sala.IdUsuarioResponsavel" />
+
+        <label>RamalResponsavel</label>
+        <input type="text" class="form-control"
+               placeholder="RamalResponsavel"
+               ng-model="sala.RamalResponsavel" />
+
+        <label>Observacao</label>
+        <input type="text" class="form-control"
+               placeholder="Observacao"
+               ng-model="sala.Observacao" />
+        <br />
+        <button class="btn btn-success" ng-click="cadastrar()">
+            Cadastrar Sala
+        </button>
+        <br /><br />
+        {{mensagem}}
+        <br />
+    </div>
+
+</div>
