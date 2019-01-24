@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{465967A1-BA3B-4C6C-91D6-855082C5541D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SalaReuniao.Dominio</RootNamespace>
+    <AssemblyName>SalaReuniao.Dominio</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Contracts\Repositories\IAgendaRepository.cs" />
+    <Compile Include="Contracts\Repositories\IBaseRepository.cs" />
+    <Compile Include="Contracts\Repositories\ICidadeRepository.cs" />
+    <Compile Include="Contracts\Repositories\IEmpresaRepository.cs" />
+    <Compile Include="Contracts\Repositories\IEstadoRepository.cs" />
+    <Compile Include="Contracts\Repositories\IParametroRepository.cs" />
+    <Compile Include="Contracts\Repositories\ISalaRepository.cs" />
+    <Compile Include="Contracts\Repositories\IUnitOfWork.cs" />
+    <Compile Include="Contracts\Repositories\IUsuarioRepository.cs" />
+    <Compile Include="Contracts\Services\IAgendaDomainService.cs" />
+    <Compile Include="Contracts\Services\ICidadeDomainService.cs" />
+    <Compile Include="Contracts\Services\IEmpresaDomainService.cs" />
+    <Compile Include="Contracts\Services\IEstadoDomainService.cs" />
+    <Compile Include="Contracts\Services\IParametroDomainService.cs" />
+    <Compile Include="Contracts\Services\IUsuarioDomainService.cs" />
+    <Compile Include="Contracts\Specifications\ISpecification.cs" />
+    <Compile Include="Exceptions\Salas\SalaNaoPodeTerOMesmoNomeDeOutraSalaException.cs" />
+    <Compile Include="Services\AgendaDomainService.cs" />
+    <Compile Include="Services\BaseDomainService.cs" />
+    <Compile Include="Contracts\Services\IBaseDomainService.cs" />
+    <Compile Include="Contracts\Services\ISalaDomainService.cs" />
+    <Compile Include="Entities\Agenda.cs" />
+    <Compile Include="Entities\Cidade.cs" />
+    <Compile Include="Entities\Empresa.cs" />
+    <Compile Include="Entities\Estado.cs" />
+    <Compile Include="Entities\Parametro.cs" />
+    <Compile Include="Entities\Sala.cs" />
+    <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CidadeDomainService.cs" />
+    <Compile Include="Services\EmpresaDomainService.cs" />
+    <Compile Include="Services\EstadoDomainService.cs" />
+    <Compile Include="Services\ParametroDomainService.cs" />
+    <Compile Include="Services\SalaDomainService.cs" />
+    <Compile Include="Services\UsuarioDomainService.cs" />
+    <Compile Include="Specifications\Salas\SalaNaoPodeTerOMesmoNomeDeOutraSalaSpecification.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
