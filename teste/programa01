@@ -1,0 +1,41 @@
+
+
+Dim con As New ADODB.Connection
+Dim rec As New ADODB.Recordset
+Dim cmd As New ADODB.Command
+Dim sql As String
+
+Private Sub Command1_Click()
+
+	con.ConnectionString = "Provider=SQLNCLI10;Server=NomeServidor\SQLEXPERESS;AttachdbFileName=c:\Arquivos de programa\data\teste.mdf;DataBase=teste;Trusted_Connection=Yes;"
+
+	con.Open
+
+	con.CursorLocation = adUseclient
+
+	sql = "select * from produto"
+
+	rec.open sql, con, asOpenStatic, asLockOptimistic
+
+	If Not rec.EOF Then
+   		rec.MoveFirst
+   		Set DataGrid1.DataSource = rec
+	End If
+
+	rec.Close
+	con.Close
+
+End Sub
+
+
+Private sub command2_Click()
+
+  	con.Connectionstring = ""
+  	con.Open
+  
+  	cmd.Activeconnection = con
+
+  	cmd.CommandText = "Insert into produto () values ()"   
+  	cmd.Execute
+
+end sub
